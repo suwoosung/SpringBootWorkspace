@@ -19,7 +19,7 @@ public class MenuDao {
 	private final SqlSessionTemplate session;
 
 	public List<Menu> selectMenis(HashMap<String, Object> param) {
-		List<Menu> list = session.selectList("menumapper.selectMenus");
+		List<Menu> list = session.selectList("menumapper.selectMenus", param);
 		
 		return list;
 	}
